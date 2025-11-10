@@ -79,7 +79,7 @@ import { useCart } from "@/composables/useCart";
 const API_BASE =
   window.location.hostname === "localhost"
     ? "http://localhost:5000/api"
-    : "https://urbilux-backend.onrender.com/api";
+    : "https://demo-2-backend.onrender.com/api";
 
 // ✅ Always send cookies with requests
 axios.defaults.withCredentials = true;

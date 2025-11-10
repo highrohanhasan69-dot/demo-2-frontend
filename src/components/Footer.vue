@@ -82,7 +82,7 @@ import axios from "axios";
 const backendURL =
   window.location.hostname.includes("localhost")
     ? "http://localhost:5000"
-    : "https://urbilux-backend.onrender.com"; // 🔹 তোমার Render API লিংক বসাও
+    : "https://demo-2-backend.onrender.com"; // 🔹 তোমার Render API লিংক বসাও
 
 // Footer state variables
 const supportItems = ref([]);

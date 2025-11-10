@@ -68,7 +68,7 @@ const router = useRouter();
 const API_BASE =
   window.location.hostname === "localhost"
     ? "http://localhost:5000"
-    : "https://urbilux-backend.onrender.com";
+    : "https://demo-2-backend.onrender.com";
 
 onMounted(fetchCart);
 

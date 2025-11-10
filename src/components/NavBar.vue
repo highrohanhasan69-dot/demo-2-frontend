@@ -150,7 +150,7 @@ const { itemCount } = storeToRefs(cartStore);
 axios.defaults.baseURL =
   window.location.hostname === "localhost"
     ? "http://localhost:5000/api"
-    : "https://urbilux-backend.onrender.com/api";
+    : "https://demo-2-backend.onrender.com/api";
 
 axios.defaults.withCredentials = true;
 console.log("🔗 Using API base URL:", axios.defaults.baseURL);
@@ -188,7 +188,7 @@ const fetchSuggestions = async () => {
     const base =
       window.location.hostname === "localhost"
         ? "http://localhost:5000"
-        : "https://urbilux-backend.onrender.com";
+        : "https://demo-2-backend.onrender.com";
     const res = await axios.get(`${base}/products/search?q=${encodeURIComponent(query)}`);
     suggestions.value = res.data || [];
   } catch (err) {

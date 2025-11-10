@@ -10,7 +10,7 @@ const tabs = ["Pending", "Processing", "Delivered"];
 const API_BASE =
   window.location.hostname === "localhost"
     ? "http://localhost:5000/api"
-    : "https://urbilux-backend.onrender.com/api";
+    : "https://demo-2-backend.onrender.com/api";
 
 axios.defaults.baseURL = API_BASE;
 axios.defaults.withCredentials = true;

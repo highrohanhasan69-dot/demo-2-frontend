@@ -144,7 +144,7 @@ import { ref, onMounted } from "vue";
 
 const BASE_URL = window.location.hostname.includes("localhost")
   ? "http://localhost:5000/api/footer"
-  : "https://urbilux-backend.onrender.com/api/footer";
+  : "https://demo-2-backend.onrender.com/api/footer";
 
 const supportItems = ref([]);
 const aboutColumns = ref([[], [], []]);
