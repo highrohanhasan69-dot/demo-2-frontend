@@ -1,102 +1,97 @@
 <template>
-  <div class="welcome-banner">
-    <img
-      src="https://res.cloudinary.com/demo/image/upload/v1720000000/urbilux-banner.jpg"
-      alt="Welcome to Urbilux"
-      class="banner-image"
-    />
-
-    <div class="banner-content">
-      <h1 class="banner-title">Welcome to <span>Urbilux</span></h1>
-      <p class="banner-subtitle">
-        Discover the latest trends in fashion and cosmetics.
+  <section class="welcome-banner">
+    <div class="content">
+      <h1 class="title">Welcome to <span>URBILUX</span></h1>
+      <p class="subtitle">
+        Discover elegant and affordable fashion & cosmetics, tailored for your sophisticated taste.
       </p>
-      <router-link to="/shop" class="shop-now-btn">Shop Now</router-link>
+      <router-link to="/shop" class="shop-btn">Shop Now</router-link>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
-// no JS logic needed, this is a static banner
+// Static component — no JS needed
 </script>
 
 <style scoped>
+/* 🟣 Full Banner Section */
 .welcome-banner {
-  position: relative;
   width: 100%;
-  height: 600px;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* overlay content */
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  background: linear-gradient(180deg, #4A00E0 0%, #8E2DE2 100%);
   color: #fff;
-  background: rgba(0, 0, 0, 0.25);
-  padding: 40px 60px;
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
 }
 
-.banner-title {
-  font-size: 48px;
+/* 🟣 Content Center */
+.content {
+  max-width: 750px;
+  padding: 0 20px;
+}
+
+/* 🟣 Title */
+.title {
+  font-size: 44px;
   font-weight: 800;
   margin-bottom: 10px;
+  letter-spacing: 0.3px;
 }
 
-.banner-title span {
-  background: linear-gradient(90deg, #4A00E0, #8E2DE2);
+.title span {
+  background: linear-gradient(90deg, #ffffff, #dcd0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.banner-subtitle {
+/* 🟣 Subtitle */
+.subtitle {
   font-size: 18px;
-  margin-bottom: 25px;
-  opacity: 0.9;
+  opacity: 0.92;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
-.shop-now-btn {
-  background: linear-gradient(90deg, #4A00E0, #8E2DE2);
-  color: #fff;
+/* 🟣 Shop Now Button */
+.shop-btn {
+  background: #fff;
+  color: #6a11cb;
   font-weight: 700;
   text-decoration: none;
-  padding: 14px 36px;
+  padding: 12px 32px;
   border-radius: 999px;
-  box-shadow: 0 8px 22px rgba(142, 45, 226, 0.35);
+  font-size: 16px;
+  box-shadow: 0 8px 25px rgba(255,255,255,0.25);
   transition: all 0.25s ease;
 }
 
-.shop-now-btn:hover {
+.shop-btn:hover {
+  background: #f4f4f4;
   transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(142, 45, 226, 0.45);
 }
 
+/* 🟣 Responsive */
 @media (max-width: 768px) {
   .welcome-banner {
-    height: 380px;
+    height: 360px;
+    border-radius: 0 0 20px 20px;
   }
-  .banner-content {
-    padding: 20px 25px;
+  .title {
+    font-size: 26px;
   }
-  .banner-title {
-    font-size: 28px;
-  }
-  .banner-subtitle {
+  .subtitle {
     font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .shop-btn {
+    font-size: 14px;
+    padding: 10px 26px;
   }
 }
 </style>
