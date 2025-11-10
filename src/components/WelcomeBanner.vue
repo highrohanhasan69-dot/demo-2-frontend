@@ -1,97 +1,116 @@
 <template>
   <section class="welcome-banner">
     <div class="content">
-      <h1 class="title">Welcome to <span>URBILUX</span></h1>
+      <h1 class="title">Welcome to <span class="brand">URBILUX</span></h1>
       <p class="subtitle">
-        Discover elegant and affordable fashion & cosmetics, tailored for your sophisticated taste.
+        Discover elegance and style across our exclusive collections, tailored for your sophisticated taste.
       </p>
-      <router-link to="/shop" class="shop-btn">Shop Now</router-link>
+      <a href="https://urbilux.pages.dev/all-products" class="shop-btn">
+        Shop Now
+      </a>
     </div>
   </section>
 </template>
 
 <script setup>
-// Static component — no JS needed
+// No JS needed
 </script>
 
 <style scoped>
-/* 🟣 Full Banner Section */
+/* === Base Section === */
 .welcome-banner {
   width: 100%;
-  height: 480px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #b27bff, #c495ff, #d0a9ff);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(180deg, #4A00E0 0%, #8E2DE2 100%);
-  color: #fff;
-  border-radius: 0 0 40px 40px;
-  position: relative;
-  overflow: hidden;
+  font-family: "Georgia", serif;
+  padding: 2rem;
 }
 
-/* 🟣 Content Center */
+/* === Content Wrapper === */
 .content {
-  max-width: 750px;
-  padding: 0 20px;
+  max-width: 800px;
 }
 
-/* 🟣 Title */
+/* === Title === */
 .title {
-  font-size: 44px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  letter-spacing: 0.3px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
-.title span {
-  background: linear-gradient(90deg, #ffffff, #dcd0ff);
+.brand {
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* 🟣 Subtitle */
+/* === Subtitle === */
 .subtitle {
-  font-size: 18px;
-  opacity: 0.92;
-  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #2d2d2d;
   line-height: 1.6;
+  margin-bottom: 2.5rem;
 }
 
-/* 🟣 Shop Now Button */
+/* === Button === */
 .shop-btn {
-  background: #fff;
-  color: #6a11cb;
-  font-weight: 700;
+  display: inline-block;
+  background: linear-gradient(90deg, #a24eff, #c977ff);
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
   text-decoration: none;
-  padding: 12px 32px;
-  border-radius: 999px;
-  font-size: 16px;
-  box-shadow: 0 8px 25px rgba(255,255,255,0.25);
-  transition: all 0.25s ease;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .shop-btn:hover {
-  background: #f4f4f4;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-/* 🟣 Responsive */
+/* === Mobile Responsive Styles === */
 @media (max-width: 768px) {
   .welcome-banner {
-    height: 360px;
-    border-radius: 0 0 20px 20px;
+    padding: 1.5rem;
   }
+
   .title {
-    font-size: 26px;
+    font-size: 2.2rem;
+    line-height: 1.3;
   }
+
   .subtitle {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
   }
+
   .shop-btn {
-    font-size: 14px;
-    padding: 10px 26px;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.6rem;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .shop-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.4rem;
   }
 }
 </style>
